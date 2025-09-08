@@ -1,0 +1,7 @@
+{
+  "name": "ytdl_vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

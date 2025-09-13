@@ -8,8 +8,9 @@ export async function fetchInfo(url, provider = 'auto') {
   return resp.data;
 }
 
-export async function postDownload(url, itag, filename, output='mp4', provider = 'auto') {
-  const resp = await api.post('/download', { url, itag, filename, output, provider });
+export async function postDownload(url, itag, filename, output = 'mp4', provider = 'auto') {
+  const body = { url, itag, filename, output, provider };
+  const resp = await api.post('/download', body);
   return resp.data;
 }
 

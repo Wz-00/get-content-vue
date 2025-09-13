@@ -217,7 +217,11 @@ async function onSearch(){
 
     // enqueue job
     const filename = (resp.data.title || 'video').replace(/[^\w\-_. ]+/g,'_');
-    const q = await postDownload(url.value, chosen.itag, filename, 'mp4');
+    const outputExt = (/^\d+$/.test(String(selectedRes.value))) ? 'mp4' : String(selectedRes.value).toLowerCase();
+
+    // jika selectedRes adalah 'mp3'/'m4a'/'aac'/'wav' => kirim output sesuai itu
+    const q = await postDownload(url.value, chosen.itag, filename, outputExt);
+
     if(!q || !q.status) throw new Error(q?.message || 'Gagal enqueue job');
 
     jobId.value = q.jobId;

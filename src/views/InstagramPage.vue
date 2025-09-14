@@ -3,11 +3,11 @@
     <div class="dl w-100">
       <div class="head mb-4 text-center">
         <h1>Instagram Downloader</h1>
-        <p class="text-muted">Download Instagram Video or Audio — pilih format sebelum cari</p>
+        <p>Download Instagram Video or Audio — pilih format sebelum cari</p>
       </div>
 
       <div class="input-group">
-        <form @submit.prevent="onSearch" class="mb-3 d-flex gap-2 align-items-center">
+        <form @submit.prevent="onSearch" class="my-3 d-flex gap-2 align-items-center">
           <input v-model="url" type="text" placeholder="Paste Url here..." id="findurl" />
           <format-selector v-model:selected="selectedRes" />
           <button type="submit" class="find d-flex align-items-center" :disabled="loading">
@@ -240,7 +240,7 @@ async function onSearch(){
         width: 100%;
     }
     .input-group {
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 0 1rem;
         border-radius: 24px;
         box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.1);
@@ -249,6 +249,7 @@ async function onSearch(){
         display: flex;
         flex-direction: row;
         width: 100%;
+        color: var(--text);
     }
     .find {
       background-color: blue;
@@ -264,6 +265,8 @@ async function onSearch(){
         width: inherit;
         height: 108px;
         outline: none;
+        background-color: var(--card-bg);
+        color: var(--text);
     }
     .url-info {
         background-color: white;

@@ -123,8 +123,8 @@ function labelFor(val) {
   top: calc(100% + 8px);
   right: 0;
   z-index: 50;
-  background: #0f1113;
-  color: #e6e6e6;
+  background: var(--card-bg);
+  color: var(--text);
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
   padding: 12px;
@@ -132,7 +132,7 @@ function labelFor(val) {
   min-width: 220px;
 }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.group-label { font-size: 13px; color: #bdbdbd; margin-bottom: 6px; font-weight: 700; }
+.group-label { font-size: 13px; color: var(--text); margin-bottom: 6px; font-weight: 700; }
 .options { list-style: none; padding: 0; margin: 0; }
 .opt { width: 100%; text-align: left; background: transparent; border: none; padding: 6px 4px; font-size: 13px; color: inherit; cursor: pointer; border-radius: 6px; }
 .opt:hover { background: rgba(255,255,255,0.03); }

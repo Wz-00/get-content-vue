@@ -1,2 +1,37 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+/* src/styles/theme.css */
+
+/* default (light) */
+:root{
+  --page-bg: #f5f6fa;        /* page background behind cards */
+  --card-bg: #ffffff;        /* card / navbar bg */
+  --text: #111827;           /* main text */
+  --muted: #6b7280;          /* muted text */
+  --accent: #fc3b2d;         /* accent / hover */
+  --toggle-bg: #e7e7e7;      /* switch bg */
+  --link: #111827;
+  --progress-bg: linear-gradient(90deg, #4f46e5, #06b6d4);
+}
+
+/* dark mode overrides */
+body.darkmode {
+  --page-bg: #0f1113;
+  --card-bg: #0b0d0f;
+  --text: #e6e6e6;
+  --muted: #9ca3af;
+  --accent: #E3589C;
+  --toggle-bg: #1f2937;
+  --link: #e6e6e6;
+  --progress-bg: linear-gradient(90deg,#7c3aed,#06b6d4);
+}
+
+/* usage helpers — optional */
+body {
+  background-color: var(--page-bg);
+  color: var(--text);
+}
+
+/* Example: progress bar style */
+.progress-bar {
+  background: var(--progress-bg);
+  transition: width .25s ease;
+}

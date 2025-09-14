@@ -25,7 +25,7 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 
 
 /* Theme variables */
-// import './theme/variables.css';
+import './theme/variables.css';
 
 const app = createApp(App)
   .use(IonicVue)
